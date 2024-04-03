@@ -30,7 +30,9 @@ while True:
         else:
             print("Saque")
             saque = input("Qual o valor deseja sacar: ")
-            if float(saque) > saldo:
+            if float(saque) > limite:
+                print("Limite máximo de saque é de R$500.00")
+            elif float(saque) > saldo:
                 print("Saldo insuficiente pra o valor informado")
             else:
                 extrato += "Saque de R$"+saque+"\n\n"
